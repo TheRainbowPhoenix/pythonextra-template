@@ -58,5 +58,5 @@ while True:
 
     # Exit if any key pressed
     ev = gint.pollevent()
-    if ev.type == gint.KEY_EXIT:
+    if ev.type == gint.KEYEV_DOWN and ev.key == gint.KEY_EXIT:
         break
