@@ -11,6 +11,8 @@ class KeyEvent:
     alpha: bool
     type: int
     key: int
+    x: int
+    y: int
 
 class image:
     """
@@ -538,6 +540,9 @@ KEYEV_NONE: int
 KEYEV_DOWN: int
 KEYEV_UP: int
 KEYEV_HOLD: int
+KEYEV_TOUCH_DOWN: int
+KEYEV_TOUCH_UP: int
+KEYEV_TOUCH_DRAG: int
 
 GETKEY_MOD_SHIFT: int
 GETKEY_MOD_ALPHA: int
