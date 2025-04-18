@@ -32,8 +32,8 @@ class image:
         mono_img = image(IMAGE_MONO, 32, 32, img_data)
     """
 
-    def __init__(self, profile: int, width: int, height: int, 
-                stride: int, color_count: int, 
+    def __init__(self, profile: int, color_count: int, width: int, height: int, 
+                stride: int, 
                 data: BufferLike, palette: BufferLike):
         """Constructs an image from pixel data and palette information.
         
@@ -536,6 +536,8 @@ KEY_STORE: int
 KEY_TIMES: int
 KEY_PLUS: int
 KEY_MINUS: int
+KEY_KBD: int
+KEY_EQUALS: int
 KEYEV_NONE: int
 KEYEV_DOWN: int
 KEYEV_UP: int
@@ -604,3 +606,38 @@ IMAGE_FLAGS_DATA_RO: int
 IMAGE_FLAGS_PALETTE_RO: int
 IMAGE_FLAGS_DATA_ALLOC: int
 IMAGE_FLAGS_PALETTE_ALLOC: int
+
+# Custom fonts
+
+def font(
+    prop: int,
+    line_height: int,
+    data_height: int,
+    block_count: int,
+    glyph_count: int,
+    char_spacing: int,
+    line_distance: int,
+    blocks: bytes,
+    data: bytes,
+    # Monospaced fonts
+    width: int,
+    storage_size: int,
+    # Proportional fonts
+    glyph_index: bytes,
+    glyph_width: bytes
+) -> GintFont: ...
+
+class GintFont:
+    prop: int
+    line_height: int
+    data_height: int
+    block_count: int
+    glyph_count: int
+    char_spacing: int
+    line_distance: int
+    blocks: bytes
+    data: bytes
+    width: int
+    storage_size: int
+    glyph_index: bytes
+    glyph_width: bytes

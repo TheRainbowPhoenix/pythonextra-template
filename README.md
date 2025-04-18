@@ -129,7 +129,24 @@ This repo contains:
 
 - `bounce.py`: A simple boucig logo example (start here!)
 
+- `gint.py`: Simulator (using pygame) to test you game locally
+
 - `.typings/` and `.vscode/`: are settings folder for PythonExtra to work on VS Code. Do not delete them.
+
+- `/` and `.vscode/`: are settings folder for PythonExtra to work on VS Code. Do not delete them.
+
+
+When deploying to your calculator, you only need to copy your code (`bounce.py`, the file you created etc).
+
+> Do NOT copy `gint.py` to your calculator, nor the ".typing" nor "tools" nor "_data". All of that is only useful when debugging locally.
+
+## Debugging locally
+
+If you have the `gint.py` file in the same place than your code (`bounce.py`), you can try to run or even debug it with visual studio (or your favorite IDE)
+
+You'd need pygame installed, you can do it with `pip install -r requirements.txt`
+
+If using VS Code, you can simply place breakpoint on your code (`bounce.py` for example) and press "F5", and choose "Python Debugger" then "Python File".
 
 
 ## Try Drawing Code Online
